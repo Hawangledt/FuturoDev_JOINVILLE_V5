@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinaleira com JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>Sinaleira DOM</h2>
+
+    <div class="sinaleira">
+        <div id="vermelho" class="luz vermelho"></div>
+        <div id="amarelo" class="luz amarelo"></div>
+        <div id="verde" class="luz verde"></div>
+    </div>
+
+    <div class="controles">
+        <h4>Controles Manuais</h4>
+        <button onclick="acender('vermelho')">Vermelho</button>
+        <button onclick="acender('amarelo')">Amarelo</button>
+        <button onclick="acender('verde')">Verde</button>
+        <button onclick="desligar()">Desligar</button>
+    </div>
+
+    <div class="controles">
+        <h4>Controles Especiais</h4>
+        <button onclick="iniciarAutomatico()">Iniciar modo automático</button>
+        <button onclick="desligarAutomatico()">Desligar modo automático</button>
+        <button onclick="solicitarModoPedestre()">Solicitar modo pedestre</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

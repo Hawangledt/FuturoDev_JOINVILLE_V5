@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📋 Gerenciador de Tarefas</h1>
+            <p>Organize suas atividades de forma eficiente</p>
+        </header>
+
+        <!-- Formulário para adicionar tarefa -->
+        <section class="form-section">
+            <h2>Adicionar Nova Tarefa</h2>
+            <form id="taskForm" class="task-form">
+                <div class="form-group">
+                    <label for="taskTitle">Título da Tarefa *</label>
+                    <input type="text" id="taskTitle" name="title" required 
+                           placeholder="Ex: Estudar JavaScript">
+                </div>
+                
+                <div class="form-group">
+                    <label for="taskDescription">Descrição</label>
+                    <textarea id="taskDescription" name="description" 
+                              placeholder="Descreva os detalhes da tarefa..."></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="taskCategory">Categoria</label>
+                        <select id="taskCategory" name="category">
+                            <option value="trabalho">Trabalho</option>
+                            <option value="estudos">Estudos</option>
+                            <option value="pessoal">Pessoal</option>
+                            <option value="saude">Saúde</option>
+                            <option value="lazer">Lazer</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskPriority">Prioridade</label>
+                        <select id="taskPriority" name="priority">
+                            <option value="baixa">Baixa</option>
+                            <option value="media">Média</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskDueDate">Data de Vencimento</label>
+                        <input type="date" id="taskDueDate" name="dueDate">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Adicionar Tarefa</button>
+            </form>
+        </section>
+
+        <!-- Filtros e Estatísticas -->
+        <section class="controls-section">
+            <div class="filters">
+                <h3>Filtros</h3>
+                <div class="filter-group">
+                    <select id="filterCategory" class="filter-select">
+                        <option value="">Todas as Categorias</option>
+                        <option value="trabalho">Trabalho</option>
+                        <option value="estudos">Estudos</option>
+                        <option value="pessoal">Pessoal</option>
+                        <option value="saude">Saúde</option>
+                        <option value="lazer">Lazer</option>
+                    </select>
+                    
+                    <select id="filterStatus" class="filter-select">
+                        <option value="">Todos os Status</option>
+                        <option value="pendente">Pendentes</option>
+                        <option value="concluida">Concluídas</option>
+                    </select>
+                    
+                    <select id="filterPriority" class="filter-select">
+                        <option value="">Todas as Prioridades</option>
+                        <option value="alta">Alta</option>
+                        <option value="media">Média</option>
+                        <option value="baixa">Baixa</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="statistics">
+                <h3>Estatísticas</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number" id="totalTasks">0</span>
+                        <span class="stat-label">Total</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="pendingTasks">0</span>
+                        <span class="stat-label">Pendentes</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="completedTasks">0</span>
+                        <span class="stat-label">Concluídas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="progressPercentage">0%</span>
+                        <span class="stat-label">Progresso</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lista de Tarefas -->
+        <section class="tasks-section">
+            <div class="tasks-header">
+                <h2>Minhas Tarefas</h2>
+                <div class="tasks-actions">
+                    <button id="sortTasks" class="btn btn-secondary">Ordenar por Data</button>
+                    <button id="clearCompleted" class="btn btn-danger">Limpar Concluídas</button>
+                </div>
+            </div>
+            
+            <div id="tasksList" class="tasks-list">
+                <!-- Tarefas serão inseridas aqui dinamicamente -->
+            </div>
+            
+            <div id="emptyState" class="empty-state">
+                <p>Nenhuma tarefa encontrada. Adicione uma nova tarefa para começar!</p>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
