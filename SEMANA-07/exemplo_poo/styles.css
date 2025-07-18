@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9bb;
+}
+
+.card button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 5px;
+}
