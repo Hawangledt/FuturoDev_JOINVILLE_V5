@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.post {
+    border: 1px solid #464040;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #c9eff8bb;
+}
